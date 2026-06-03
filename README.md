@@ -2,27 +2,29 @@
   <img src="assets/hero-banner.svg" alt="Particle Multiverse OS Ultimate Edition" width="100%" />
 </p>
 
-<h1 align="center">Particle Multiverse OS</h1>
+<h1 align="center">Particle Multiverse OS Ultimate Edition</h1>
 
 <p align="center">
-  <strong>A cinematic particle multiverse desktop app for Windows, built with Tauri, Vite, Canvas, and WebGL2.</strong>
+  <strong>Cinematic particle system · Cyberpunk AI interface · Tauri desktop app · Creative coding portfolio project</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/b15018232559-beep/Particle-Multiverse-OS/releases/tag/v2.0"><img alt="Release" src="https://img.shields.io/badge/release-v2.0-73fff2?style=for-the-badge&labelColor=02040e"></a>
-  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-9d79ff?style=for-the-badge&labelColor=02040e"></a>
-  <img alt="Desktop" src="https://img.shields.io/badge/platform-Windows-68eaff?style=for-the-badge&labelColor=02040e">
-  <img alt="Local First" src="https://img.shields.io/badge/privacy-local--first-ff7fcf?style=for-the-badge&labelColor=02040e">
+  <a href="https://github.com/b15018232559-beep/Particle-Multiverse-OS/releases"><img alt="Download" src="https://img.shields.io/badge/download-release-73fff2?style=for-the-badge&labelColor=02040e"></a>
+  <a href="https://github.com/b15018232559-beep/Particle-Multiverse-OS/releases/tag/v2.0"><img alt="Release" src="https://img.shields.io/badge/release-v2.0-9d79ff?style=for-the-badge&labelColor=02040e"></a>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-ff7fcf?style=for-the-badge&labelColor=02040e"></a>
+  <img alt="Windows" src="https://img.shields.io/badge/platform-Windows-68eaff?style=for-the-badge&labelColor=02040e">
 </p>
 
 <p align="center">
+  <a href="#overview">Overview</a>
+  ·
   <a href="#showcase">Showcase</a>
   ·
   <a href="#features">Features</a>
   ·
-  <a href="#install">Install</a>
+  <a href="#download--release">Download</a>
   ·
-  <a href="#tech-stack">Tech Stack</a>
+  <a href="#install">Install</a>
   ·
   <a href="#roadmap">Roadmap</a>
 </p>
@@ -31,100 +33,100 @@
 
 ## Overview
 
-**Particle Multiverse OS Ultimate Edition** is a sci-fi desktop visual system centered on six reactive particle worlds, cinematic glow, local interaction, workspace memory, agent layers, plugin control, and Mission Control.
+**Particle Multiverse OS** is a cinematic desktop experience built around six reactive particle universes. It combines particle-system rendering, cyberpunk visual design, AI-style interface layers, local voice and gesture controls, workspace memory, plugins, agents, and Mission Control into a polished Windows desktop app.
 
-It is designed as a GitHub portfolio-grade open-source project: high-impact visuals first, no fake buttons, local-first privacy, and a real Tauri desktop release pipeline.
+The project is designed as an open-source portfolio piece: visually strong, easy to run, easy to explain, and easy to share.
 
-> `v1.0` is protected and preserved. Ultimate Edition development happens on `develop` and is released as `v2.0`.
+> `v1.0` is protected. Ultimate Edition work lives on `develop` and is released as `v2.0`.
 
 ## Showcase
 
-### Dynamic Demo
+### Dynamic GIF
 
 <p align="center">
   <img src="screenshots/particle-multiverse-os-demo.gif" alt="Particle Multiverse OS animated demo" width="82%" />
 </p>
 
-### Screenshots
+### Project Screenshots
 
 <table>
   <tr>
-    <td width="50%"><img src="screenshots/Particle-Multiverse-OS-V2-preview.png" alt="Camera and gesture preview" /></td>
-    <td width="50%"><img src="screenshots/Particle-Multiverse-OS-V3-preview.png" alt="Music reactive preview" /></td>
+    <td width="50%"><img src="screenshots/world-tree.png" alt="AI World Tree particle universe" /></td>
+    <td width="50%"><img src="screenshots/black-hole.png" alt="Black Hole Universe particle scene" /></td>
   </tr>
   <tr>
-    <td align="center"><strong>Camera + Gesture Layer</strong></td>
-    <td align="center"><strong>Music Reactive Universe</strong></td>
+    <td align="center"><strong>AI World Tree</strong></td>
+    <td align="center"><strong>Black Hole Universe</strong></td>
   </tr>
   <tr>
-    <td width="50%"><img src="screenshots/Particle-Multiverse-OS-V4-preview.png" alt="AI context preview" /></td>
-    <td width="50%"><img src="screenshots/Particle-Multiverse-OS-V5-preview.png" alt="Dashboard and voice preview" /></td>
+    <td width="50%"><img src="screenshots/arc-reactor.png" alt="ARC Reactor particle universe" /></td>
+    <td width="50%"><img src="screenshots/neural-brain.png" alt="Neural Brain particle universe" /></td>
   </tr>
   <tr>
-    <td align="center"><strong>AI Context Engine</strong></td>
-    <td align="center"><strong>Dashboard + Voice Commander</strong></td>
+    <td align="center"><strong>ARC Reactor</strong></td>
+    <td align="center"><strong>Neural Brain</strong></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/tesseract.png" alt="Tesseract particle universe" /></td>
+    <td width="50%"><img src="screenshots/ultimate.png" alt="Ultimate Multiverse Core particle universe" /></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Tesseract</strong></td>
+    <td align="center"><strong>Ultimate Multiverse Core</strong></td>
   </tr>
 </table>
 
-## Worlds
-
-| World | Visual Identity | Interaction |
-| --- | --- | --- |
-| Cosmic World Tree | Infinite roots, branches, green-cyan energy | Growth Field |
-| Gargantua Well | Black hole, accretion disk, lensing-style light | Gravity Well |
-| ARC Reactor | Plasma rings, pulse waves, electric core | Plasma Charge |
-| Neural Brain | Electric cortex, neural signal mesh | Synaptic Focus |
-| Tesseract | Rotating hypercube, dimensional folding | Dimension Shift |
-| Multiverse Core | Five universes orbiting one central core | Reality Warp |
-
 ## Features
 
-- **Cinematic particle engine** with LOW, MEDIUM, HIGH, and ULTRA quality modes.
-- **Up to 30,000 particles** on ULTRA with depth layers, glow, fog, trails, and bloom.
-- **Six complete worlds**, each with distinct color, movement, and interaction behavior.
-- **Smooth navigation** through Next, Back, arrows, wheel, touchpad, and gesture swipes.
-- **Shockwave burst system** through Space, double click, voice, and Burst control.
-- **Ultimate Edition identity layer** across HUD, Dashboard, Mission Control, and desktop metadata.
-- **Mission Control** for worlds, agents, plugins, tasks, workspaces, memory, and health.
+- **Six cinematic particle worlds** with distinct colors, motion models, and interactions.
+- **Shockwave burst system** triggered by Space, double click, UI control, or voice command.
+- **Canvas/WebGL-style visual effects** with glow, depth layers, fog, trails, and cinematic atmosphere.
+- **Ultimate Edition UI identity** across HUD, Dashboard, Mission Control, and desktop metadata.
 - **Local voice commands** in Chinese and English.
-- **Hand gesture layer** with camera opt-in and local MediaPipe processing.
-- **Music reactive mode** with local audio import and Web Audio analysis.
-- **Workspace Memory** for local snapshots, scene usage, preferences, and restoration.
-- **Agent Layer + Multi-Agent System** with isolated task board, suggestions, and discussion flow.
-- **Plugin Center** with real enable/disable controls and error isolation.
-- **Tauri desktop packaging** with installer and portable release assets.
+- **Camera and hand gesture layer** using local MediaPipe processing.
+- **Music reactive universe mode** through local audio import and Web Audio analysis.
+- **Workspace Memory** for local snapshots, preferences, and scene history.
+- **Agent Layer and Multi-Agent System** with local task board and discussion flow.
+- **Plugin Center** with real enable/disable controls and isolated plugin errors.
+- **Tauri desktop release pipeline** with Windows installer and portable executable.
 
 ## Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=js,html,css,vite,tauri,rust,nodejs,github" alt="Tech stack icons" />
+  <img src="https://skillicons.dev/icons?i=js,html,css,vite,tauri,rust,nodejs,github" alt="JavaScript, HTML, CSS, Vite, Tauri, Rust, Node.js, GitHub" />
 </p>
 
-| Layer | Technology |
+| Layer | Stack |
 | --- | --- |
-| Desktop | Tauri 2 |
+| Desktop runtime | Tauri 2 |
 | Frontend | HTML, CSS, JavaScript ES Modules |
-| Renderer | Canvas 2D, optional WebGL2 instancing |
-| Build | Vite |
+| Build tool | Vite |
+| Rendering | Canvas 2D, WebGL2-style instancing path |
 | Vision | MediaPipe Tasks Vision |
 | Audio | Web Audio API |
-| Storage | Local browser storage through Workspace Memory |
+| Storage | Local Workspace Memory |
 | Packaging | Tauri NSIS Windows installer |
 
-## Install
+## Download / Release
 
-### Download Release
+Latest release:
 
-Download from GitHub Releases:
+```text
+https://github.com/b15018232559-beep/Particle-Multiverse-OS/releases
+```
+
+Release assets:
 
 - `Particle-Multiverse-OS-Setup.exe`
 - `Particle-Multiverse-OS-Portable.exe`
+- `release/GITHUB_RELEASE_v2.0.md`
 
-Or use the local release folder:
+Protected baseline:
 
-```text
-release/
-```
+- `v1.0` keeps the original portfolio release.
+- `v2.0` is the Ultimate Edition release line.
+
+## Install
 
 ### Run From Source
 
@@ -154,53 +156,43 @@ npm run build
 npm run tauri build
 ```
 
-Tauri outputs the installer under:
+The desktop installer is generated under:
 
 ```text
 src-tauri/target/release/bundle/nsis/
 ```
 
-## Controls
+## Recommended GitHub Topics
 
-| Input | Action |
-| --- | --- |
-| Mouse / touchpad | Attract particles |
-| Wheel | Expand particle field |
-| Double click | Trigger burst |
-| Long press | Converge particles |
-| Space | Shockwave |
-| Arrow keys | Switch worlds |
-| F11 | Fullscreen cinematic mode |
-| Esc | Exit fullscreen or close overlays |
-| D | Dashboard |
-| P | Plugin Center |
-| V | Voice Commander |
-| Tab | Mission Control |
+Add these topics in GitHub repository settings:
+
+```text
+particle-system
+tauri
+desktop-app
+ai-interface
+creative-coding
+cyberpunk
+visual-effects
+javascript
+vite
+```
 
 ## Roadmap
 
 - [x] v1.0: Protected cinematic particle desktop release.
-- [x] v2.0: Ultimate Edition identity layer, release metadata, and GitHub presentation upgrade.
+- [x] v2.0: Ultimate Edition identity, presentation, and release metadata.
+- [x] Portfolio README: Hero banner, screenshots, GIF, roadmap, release links, and Star History.
 - [ ] v2.1: World Tree Remaster visual pass.
-- [ ] v2.2: Release asset refresh with signed installer workflow.
-- [ ] v2.3: Documentation site and API-level architecture diagrams.
+- [ ] v2.2: Fresh release video and signed installer workflow.
+- [ ] v2.3: Documentation site and architecture diagrams.
 - [ ] v3.0: Cross-platform packaging audit.
 
-## Project Principles
+## Portfolio Materials
 
-- No fake buttons.
-- No placeholder pages.
-- No cloud upload.
-- No private-file scanning.
-- No browser-history scanning.
-- Desktop-first, local-first, visually complete.
-
-## Repository
-
-- Protected release tag: [`v1.0`](https://github.com/b15018232559-beep/Particle-Multiverse-OS/releases/tag/v1.0)
-- Ultimate release tag: [`v2.0`](https://github.com/b15018232559-beep/Particle-Multiverse-OS/releases/tag/v2.0)
-- Development branch: [`develop`](https://github.com/b15018232559-beep/Particle-Multiverse-OS/tree/develop)
-- Release notes: [`release/GITHUB_RELEASE_v2.0.md`](release/GITHUB_RELEASE_v2.0.md)
+- [Project Showcase](PROJECT_SHOWCASE.md)
+- [GitHub Profile Guide](GITHUB_PROFILE_GUIDE.md)
+- [Promotion Plan](PROMOTION_PLAN.md)
 
 ## Star History
 
