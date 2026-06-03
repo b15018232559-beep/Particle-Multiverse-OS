@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Particle Multiverse OS</title>
+    <title>Particle Multiverse OS Ultimate Edition</title>
   </head>
   <body>
     <canvas id="universe" aria-label="Particle universe visualization"></canvas>
     <div class="vignette"></div>
     <header class="topbar glass">
-      <div class="brand"><span class="brand-mark"></span><span>PARTICLE <b>MULTIVERSE</b></span></div>
+      <div class="brand"><span class="brand-mark"></span><span>PARTICLE <b>MULTIVERSE</b></span><em class="edition-pill">ULTIMATE <strong id="edition-release">v2.0</strong></em></div>
       <div class="topbar-actions">
         <button id="command-help-toggle" class="command-help-toggle" aria-label="Show command help" title="Command Help (?)">HELP / COMMAND</button>
         <button class="icon-button" id="fullscreen" aria-label="Toggle fullscreen" title="Fullscreen (F11)">
@@ -22,6 +22,11 @@
       <div class="world-index"><span id="world-number">01</span><i>/</i><small>06</small></div>
       <h1 id="world-name">AI WORLD TREE</h1>
       <p id="world-description">A living lattice of synthetic light.</p>
+      <div class="hud-rule"></div>
+      <dl class="metrics edition-metrics">
+        <div><dt>EDITION</dt><dd>ULTIMATE</dd></div>
+        <div><dt>CODENAME</dt><dd id="edition-codename">WORLD TREE REMASTER</dd></div>
+      </dl>
       <div class="hud-rule"></div>
       <dl class="metrics">
         <div><dt>FPS</dt><dd id="fps">60</dd></div>
@@ -152,6 +157,10 @@
         <div><dt>TASKS</dt><dd data-dashboard="tasks">0</dd></div>
         <div><dt>MEMORY</dt><dd data-dashboard="memory">LOCAL</dd></div>
         <div><dt>PERFORMANCE</dt><dd data-dashboard="performance">60 FPS</dd></div>
+        <div><dt>EDITION</dt><dd data-dashboard="edition">ULTIMATE</dd></div>
+        <div><dt>RELEASE</dt><dd data-dashboard="release">v2.0</dd></div>
+        <div><dt>CODENAME</dt><dd data-dashboard="codename">World Tree Remaster</dd></div>
+        <div><dt>BASELINE</dt><dd data-dashboard="baseline">v1.0 preserved</dd></div>
       </dl>
       <p id="dashboard-plugin-statuses" class="dashboard-plugin-statuses">PLUGINS LOADING</p>
       <button id="plugin-center-open" class="plugin-center-open" aria-label="Open plugin center">P / PLUGIN CENTER</button>
@@ -226,7 +235,7 @@
     </aside>
     <section id="mission-control" class="mission-control glass" aria-label="Mission Control">
       <header class="mission-header">
-        <div><p class="eyebrow">PMOS V10</p><h2>MISSION CONTROL</h2><span>Vision Pro / Jarvis command surface</span></div>
+        <div><p id="mission-edition" class="eyebrow">PMOS ULTIMATE EDITION</p><h2>MISSION CONTROL</h2><span id="mission-edition-subtitle">v2.0 / World Tree Remaster</span></div>
         <button id="mission-close" aria-label="Close Mission Control">CLOSE</button>
       </header>
       <div class="mission-grid">
@@ -268,7 +277,7 @@
     <audio id="music-audio" preload="metadata"></audio>
     <input id="music-file" class="hidden-input" type="file" accept="audio/*" multiple />
     <footer>
-      <span>MOVE TO ATTRACT</span><i></i><span>SCROLL TO EXPAND</span><i></i><span>HOLD TO CONVERGE</span>
+      <span id="footer-edition">PARTICLE MULTIVERSE OS ULTIMATE EDITION</span><i></i><span>MOVE TO ATTRACT</span><i></i><span>SCROLL TO EXPAND</span><i></i><span>HOLD TO CONVERGE</span>
     </footer>
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -32,10 +32,12 @@ import { MultiAgentManager } from "./multi-agent-manager.js";
 import { TaskBoard } from "./task-board.js";
 import { CommandCenter } from "./command-center.js";
 import { MissionControl } from "./mission-control.js";
+import { UltimateEdition } from "./ultimate-edition.js";
 
 const bus = new EventBus();
 const router = new CommandRouter(bus);
 const commandCenter = new CommandCenter(bus, router);
+const ultimateEdition = new UltimateEdition(bus);
 const shockwaves = new ShockwaveEffect();
 const transitions = new TransitionManager();
 const engine = new ParticleEngine(document.getElementById("universe"), shockwaves, transitions);
@@ -76,6 +78,7 @@ const multiAgentManager = new MultiAgentManager(bus, {
 });
 const taskBoard = new TaskBoard(bus, multiAgentManager, document.getElementById("multi-agent-center"));
 const missionControl = new MissionControl(bus, commandCenter, document.getElementById("mission-control"), {
+  getEdition: () => ultimateEdition.summary(),
   getWorlds: () => WORLD_PRESETS,
   getScene: () => ({ index: sceneManager.index, name: sceneManager.current().name }),
   getAgents: () => agentManager.list(),
@@ -381,7 +384,8 @@ workspaceMemory.start().catch((error) => bus.emit("MEMORY_ERROR", { error, messa
 dashboard.start();
 systemHealth.registerAnimationLoop();
 systemHealth.start();
-voiceCommander.emitState();
+  voiceCommander.emitState();
+ultimateEdition.start();
 
 let previous = window.performance.now();
 function frame(now) {

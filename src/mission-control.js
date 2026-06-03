@@ -69,6 +69,7 @@ export class MissionControl {
       health: this.providers.getHealth?.() ?? {},
       performance: this.providers.getPerformance?.() ?? {},
       systems: this.providers.getSystems?.() ?? {},
+      edition: this.providers.getEdition?.() ?? {},
     };
   }
 
@@ -145,6 +146,9 @@ export class MissionControl {
       ["Context", this.state.systems.context ?? "ANALYZING", "Intelligence Layer"],
       ["Health", this.state.health.health ?? "OK", "Operating Layer"],
       ["Performance", `${this.state.performance.fps ?? 60} FPS / ${this.state.performance.quality ?? "HIGH"}`, "Operating Layer"],
+      ["Edition", this.state.edition.release ?? "v2.0", this.state.edition.profile ?? "ULTIMATE"],
+      ["Codename", this.state.edition.codename ?? "World Tree Remaster", "Release Layer"],
+      ["Baseline", this.state.edition.baseline ?? "v1.0 preserved", "Release Layer"],
     ];
     list.replaceChildren(...systems.map(([name, value, layer]) => this.card(name, layer, value)));
   }

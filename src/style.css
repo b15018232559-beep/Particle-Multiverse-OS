@@ -9,6 +9,8 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .brand { display: flex; align-items: center; gap: 12px; color: rgba(228, 241, 255, .88); letter-spacing: 4px; font: 500 10px "Segoe UI", sans-serif; }
 .brand b { color: var(--accent); font-weight: 600; text-shadow: 0 0 18px var(--accent); }
 .brand-mark { width: 10px; height: 10px; border: 1px solid var(--accent); transform: rotate(45deg); box-shadow: 0 0 14px var(--accent); }
+.edition-pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 7px; border: 1px solid rgba(168,216,255,.16); border-radius: 999px; background: linear-gradient(90deg, rgba(102,255,211,.12), rgba(157,121,255,.12)); color: rgba(230,240,255,.72); font-style: normal; font-size: 7px; letter-spacing: 1.6px; }
+.edition-pill strong { color: var(--accent); font-weight: 600; text-shadow: 0 0 12px var(--accent); }
 .topbar-actions { display: flex; align-items: center; gap: 12px; }
 .command-help-toggle { padding: 6px 8px; border: 1px solid rgba(168,216,255,.14); border-radius: 2px; background: rgba(30,50,86,.18); color: rgba(220,235,250,.72); font-size: 7px; letter-spacing: 1.4px; }
 .command-help-toggle:hover { border-color: var(--accent); color: var(--accent); }
@@ -31,6 +33,7 @@ h1 { max-width: 215px; margin: 0; color: #f2f7ff; font: 600 17px/1.35 "Segoe UI"
 .metrics div { display: flex; justify-content: space-between; padding: 6px 0; }
 .metrics dt { color: rgba(192,210,232,.45); font-size: 8px; letter-spacing: 2px; }
 .metrics dd { margin: 0; color: rgba(232,243,255,.9); font: 500 9px "Segoe UI"; letter-spacing: 1.4px; }
+.edition-metrics dd { color: var(--accent); max-width: 136px; overflow: hidden; text-align: right; text-overflow: ellipsis; white-space: nowrap; text-shadow: 0 0 12px rgba(102,255,211,.28); }
 .command-feedback dt { max-width: 128px; }
 .command-feedback dd { max-width: 118px; overflow: hidden; text-align: right; text-overflow: ellipsis; white-space: nowrap; }
 .world-nav { position: fixed; left: 50%; bottom: 62px; display: flex; align-items: center; gap: 28px; padding: 7px 10px; border-radius: 28px; transform: translateX(-50%); }

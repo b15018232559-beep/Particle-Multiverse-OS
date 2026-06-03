@@ -11,6 +11,7 @@ export class UltimateDashboard {
       music: "OFF", camera: "OFF", hand: "OFF", context: "ANALYZING", autoMode: "OFF", health: "OK",
       pluginTotal: 0, pluginEnabled: 0, pluginDisabled: 0, pluginErrors: 0,
       agents: 0, teamAgents: 0, tasks: 0, memory: "LOCAL", performance: "60 FPS",
+      edition: "ULTIMATE", release: "v2.0", codename: "World Tree Remaster", baseline: "v1.0 preserved",
       favoriteScene: "AI WORLD TREE", mostUsedScene: "AI WORLD TREE", lastScene: "AI WORLD TREE",
       totalUsageTime: "00:00:00", lastVisit: "NEVER", savedWorkspaces: 4,
       recommendedScene: "AI WORLD TREE", recommendedQuality: "HIGH", recommendedWorkspace: "Custom Workspace",
@@ -50,6 +51,13 @@ export class UltimateDashboard {
       this.state.recommendedScene = scene;
       this.state.recommendedQuality = quality;
       this.state.recommendedWorkspace = workspace;
+    });
+    bus.on("ULTIMATE_EDITION_READY", ({ release, codename, profile, baseline }) => {
+      this.state.edition = profile;
+      this.state.release = release;
+      this.state.codename = codename;
+      this.state.baseline = baseline;
+      this.render();
     });
   }
 
