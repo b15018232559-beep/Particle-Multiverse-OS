@@ -1,0 +1,1 @@
+{"id":"gesture-plugin","name":"Gesture Plugin","version":"1.0.0","description":"Hand gesture recognition integration.","dependencies":["camera-plugin"],"autoEnable":true}

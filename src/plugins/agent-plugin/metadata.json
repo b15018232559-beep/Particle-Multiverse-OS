@@ -1,0 +1,8 @@
+{
+  "id": "agent-plugin",
+  "name": "Agent Plugin",
+  "version": "1.0.0",
+  "description": "Controls the local AI Agent Layer and pauses all agents when disabled.",
+  "dependencies": ["context-plugin", "workspace-memory-plugin", "dashboard-plugin"],
+  "autoEnable": true
+}

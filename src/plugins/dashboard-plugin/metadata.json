@@ -1,0 +1,1 @@
+{"id":"dashboard-plugin","name":"Dashboard Plugin","version":"1.0.0","description":"Ultimate Dashboard and Plugin Center integration.","dependencies":["performance-plugin"],"autoEnable":true}

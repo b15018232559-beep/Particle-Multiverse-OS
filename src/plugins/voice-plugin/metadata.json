@@ -1,0 +1,1 @@
+{"id":"voice-plugin","name":"Voice Plugin","version":"1.0.0","description":"Opt-in Web Speech voice integration.","dependencies":["keyboard-plugin"],"autoEnable":false}

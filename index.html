@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Particle Multiverse OS</title>
+  </head>
+  <body>
+    <canvas id="universe" aria-label="Particle universe visualization"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar glass">
+      <div class="brand"><span class="brand-mark"></span><span>PARTICLE <b>MULTIVERSE</b></span></div>
+      <div class="topbar-actions">
+        <button id="command-help-toggle" class="command-help-toggle" aria-label="Show command help" title="Command Help (?)">HELP / COMMAND</button>
+        <button class="icon-button" id="fullscreen" aria-label="Toggle fullscreen" title="Fullscreen (F11)">
+          <span></span><span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <aside class="hud glass">
+      <p class="eyebrow">CURRENT WORLD</p>
+      <div class="world-index"><span id="world-number">01</span><i>/</i><small>06</small></div>
+      <h1 id="world-name">AI WORLD TREE</h1>
+      <p id="world-description">A living lattice of synthetic light.</p>
+      <div class="hud-rule"></div>
+      <dl class="metrics">
+        <div><dt>FPS</dt><dd id="fps">60</dd></div>
+        <div><dt>PARTICLES</dt><dd id="particle-count">0</dd></div>
+        <div><dt>QUALITY</dt><dd id="quality">HIGH</dd></div>
+        <div><dt>EFFECT</dt><dd id="effect">STABLE</dd></div>
+      </dl>
+      <div class="hud-rule"></div>
+      <dl class="metrics command-feedback">
+        <div><dt>LAST VOICE COMMAND</dt><dd id="last-voice-command">NONE</dd></div>
+        <div><dt>LAST GESTURE</dt><dd id="last-gesture">NONE</dd></div>
+        <div><dt>COMMAND RESULT</dt><dd id="command-result">READY</dd></div>
+        <div><dt>CONFIDENCE</dt><dd id="command-confidence">0.00</dd></div>
+        <div><dt>ACTION</dt><dd id="command-action">READY</dd></div>
+      </dl>
+    </aside>
+    <nav class="world-nav glass" aria-label="World navigation">
+      <button id="previous" class="nav-button" aria-label="Previous world"><span>&larr;</span><em>BACK</em></button>
+      <div id="world-dots" class="world-dots"></div>
+      <button id="next" class="nav-button" aria-label="Next world"><em>NEXT</em><span>&rarr;</span></button>
+    </nav>
+    <section class="action-panel">
+      <button id="burst" class="burst-button" aria-label="Trigger energy burst">
+        <span class="burst-core"></span>
+        <span class="burst-ring"></span>
+        <b>BURST</b>
+        <small>SPACE</small>
+      </button>
+    </section>
+    <section class="quality glass" aria-label="Quality settings">
+      <span>QUALITY</span>
+      <div id="quality-options"></div>
+    </section>
+    <aside class="hand-panel glass" aria-label="Hand control status">
+      <div class="hand-heading">
+        <p class="eyebrow">HAND CONTROL</p>
+        <button id="camera-toggle" class="camera-toggle" aria-label="Toggle camera and hand control">
+          <span></span><b>CAMERA / HAND</b><small>H</small>
+        </button>
+      </div>
+      <dl class="hand-metrics">
+        <div><dt>CAMERA</dt><dd id="camera-status">OFF</dd></div>
+        <div><dt>HAND</dt><dd id="hand-status">LOST</dd></div>
+        <div><dt>GESTURE</dt><dd id="gesture-status">NONE</dd></div>
+        <div><dt>CONFIDENCE</dt><dd id="gesture-confidence">0.00</dd></div>
+        <div><dt>CONTROL</dt><dd id="control-status">MANUAL</dd></div>
+        <div><dt>ADVANCED</dt><dd id="advanced-status">READY</dd></div>
+      </dl>
+      <p id="fallback-status" class="fallback-status">MANUAL MODE READY</p>
+    </aside>
+    <section id="camera-preview" class="camera-preview glass hidden" aria-label="Camera preview">
+      <video id="camera-video" autoplay muted playsinline></video>
+      <p>CAMERA PREVIEW <span>ESC HIDE</span></p>
+    </section>
+    <aside id="music-panel" class="music-panel glass" aria-label="Music universe controls">
+      <div class="music-heading">
+        <p class="eyebrow">MUSIC UNIVERSE</p>
+        <button id="music-mode" class="music-mode" aria-label="Toggle music mode"><span></span><b>MODE</b><small id="music-mode-state">OFF</small></button>
+      </div>
+      <div class="music-track"><strong id="music-name">MULTIVERSE AMBIENCE</strong><span id="music-state">READY</span></div>
+      <dl class="music-metrics">
+        <div><dt>VOLUME</dt><dd><i><b id="music-volume-bar"></b></i><span id="music-volume">0.00</span></dd></div>
+        <div><dt>BASS</dt><dd><i><b id="music-bass-bar"></b></i><span id="music-bass">0.00</span></dd></div>
+        <div><dt>MID</dt><dd><i><b id="music-mid-bar"></b></i><span id="music-mid">0.00</span></dd></div>
+        <div><dt>TREBLE</dt><dd><i><b id="music-treble-bar"></b></i><span id="music-treble">0.00</span></dd></div>
+        <div><dt>BEAT</dt><dd><i><b id="music-beat-bar"></b></i><span id="music-beat">READY</span></dd></div>
+        <div><dt>ENERGY</dt><dd><i><b id="music-energy-bar"></b></i><span id="music-energy">0.00</span></dd></div>
+      </dl>
+      <div class="music-controls">
+        <button id="music-previous" aria-label="Previous music track">B / PREV</button>
+        <button id="music-play" aria-label="Play or pause music">M / PLAY</button>
+        <button id="music-next" aria-label="Next music track">N / NEXT</button>
+        <button id="music-import" aria-label="Import local music">IMPORT</button>
+      </div>
+      <p class="music-drop">DROP AUDIO FILES HERE</p>
+    </aside>
+    <aside id="context-panel" class="context-panel glass" aria-label="AI context controls">
+      <div class="context-heading">
+        <p class="eyebrow">AI CONTEXT</p>
+        <button id="context-auto" class="context-auto" aria-label="Toggle AI context auto mode"><span></span><b>AUTO</b><small id="context-auto-state">OFF</small></button>
+      </div>
+      <dl class="context-metrics">
+        <div><dt>CONTEXT</dt><dd id="context-name">ANALYZING</dd></div>
+        <div><dt>RECOMMENDED</dt><dd id="context-world">AI WORLD TREE</dd></div>
+        <div><dt>CONFIDENCE</dt><dd id="context-confidence">0.00</dd></div>
+        <div><dt>LAST SWITCH</dt><dd id="context-last-switch">NEVER</dd></div>
+      </dl>
+      <div class="context-controls">
+        <button id="context-study" aria-label="Select study context">STUDY</button>
+        <button id="context-coding" aria-label="Select coding context">CODING</button>
+        <button id="context-accept" aria-label="Accept AI context recommendation">SHIFT+A / ACCEPT</button>
+      </div>
+      <p id="context-status" class="context-status">SUGGEST MODE</p>
+    </aside>
+    <aside id="voice-panel" class="voice-panel glass" aria-label="Voice commander controls">
+      <div class="voice-heading">
+        <p class="eyebrow">VOICE COMMANDER</p>
+        <button id="voice-toggle" class="voice-toggle" aria-label="Toggle voice commander"><span></span><b>VOICE</b><small id="voice-state">OFF</small></button>
+      </div>
+      <dl class="voice-metrics">
+        <div><dt>LISTENING</dt><dd id="voice-listening">NO</dd></div>
+        <div><dt>LAST COMMAND</dt><dd id="voice-command">NONE</dd></div>
+        <div><dt>RECOGNIZED</dt><dd id="voice-text">NONE</dd></div>
+        <div><dt>ACTION</dt><dd id="voice-action">READY</dd></div>
+        <div><dt>CONFIDENCE</dt><dd id="voice-confidence">0.00</dd></div>
+      </dl>
+    </aside>
+    <aside id="ultimate-dashboard" class="ultimate-dashboard glass" aria-label="Ultimate dashboard">
+      <button id="dashboard-toggle" class="dashboard-toggle" aria-label="Toggle ultimate dashboard"><span>D</span><b>SYSTEM COMMAND CENTER</b></button>
+      <dl class="dashboard-metrics">
+        <div><dt>SYSTEM</dt><dd data-dashboard="system">ONLINE</dd></div>
+        <div><dt>CURRENT WORLD</dt><dd data-dashboard="world">AI WORLD TREE</dd></div>
+        <div><dt>FPS</dt><dd data-dashboard="fps">60</dd></div>
+        <div><dt>QUALITY</dt><dd data-dashboard="quality">HIGH</dd></div>
+        <div><dt>PARTICLES</dt><dd data-dashboard="particles">0</dd></div>
+        <div><dt>MUSIC</dt><dd data-dashboard="music">OFF</dd></div>
+        <div><dt>CAMERA</dt><dd data-dashboard="camera">OFF</dd></div>
+        <div><dt>HAND</dt><dd data-dashboard="hand">OFF</dd></div>
+        <div><dt>CONTEXT</dt><dd data-dashboard="context">ANALYZING</dd></div>
+        <div><dt>AUTO MODE</dt><dd data-dashboard="autoMode">OFF</dd></div>
+        <div><dt>SYSTEM HEALTH</dt><dd data-dashboard="health">OK</dd></div>
+        <div><dt>PLUGINS</dt><dd data-dashboard="pluginTotal">0</dd></div>
+        <div><dt>PLUGIN ENABLED</dt><dd data-dashboard="pluginEnabled">0</dd></div>
+        <div><dt>PLUGIN DISABLED</dt><dd data-dashboard="pluginDisabled">0</dd></div>
+        <div><dt>PLUGIN ERRORS</dt><dd data-dashboard="pluginErrors">0</dd></div>
+        <div><dt>AGENTS</dt><dd data-dashboard="agents">0</dd></div>
+        <div><dt>AGENT TEAM</dt><dd data-dashboard="teamAgents">0</dd></div>
+        <div><dt>TASKS</dt><dd data-dashboard="tasks">0</dd></div>
+        <div><dt>MEMORY</dt><dd data-dashboard="memory">LOCAL</dd></div>
+        <div><dt>PERFORMANCE</dt><dd data-dashboard="performance">60 FPS</dd></div>
+      </dl>
+      <p id="dashboard-plugin-statuses" class="dashboard-plugin-statuses">PLUGINS LOADING</p>
+      <button id="plugin-center-open" class="plugin-center-open" aria-label="Open plugin center">P / PLUGIN CENTER</button>
+      <section class="memory-center">
+        <p class="eyebrow">MEMORY CENTER</p>
+        <dl class="memory-metrics">
+          <div><dt>FAVORITE SCENE</dt><dd data-dashboard="favoriteScene">AI WORLD TREE</dd></div>
+          <div><dt>MOST USED</dt><dd data-dashboard="mostUsedScene">AI WORLD TREE</dd></div>
+          <div><dt>LAST SCENE</dt><dd data-dashboard="lastScene">AI WORLD TREE</dd></div>
+          <div><dt>USAGE TIME</dt><dd data-dashboard="totalUsageTime">00:00:00</dd></div>
+          <div><dt>LAST VISIT</dt><dd data-dashboard="lastVisit">NEVER</dd></div>
+          <div><dt>WORKSPACES</dt><dd data-dashboard="savedWorkspaces">5</dd></div>
+          <div><dt>RECOMMENDED SCENE</dt><dd data-dashboard="recommendedScene">AI WORLD TREE</dd></div>
+          <div><dt>RECOMMENDED QUALITY</dt><dd data-dashboard="recommendedQuality">HIGH</dd></div>
+          <div><dt>RECOMMENDED WORKSPACE</dt><dd data-dashboard="recommendedWorkspace">Custom Workspace</dd></div>
+        </dl>
+        <p id="memory-ranking" class="memory-ranking">MOST USED WORLDS LOADING</p>
+        <input id="workspace-name" type="text" placeholder="CUSTOM WORKSPACE" aria-label="Custom workspace name" />
+        <div class="memory-controls">
+          <button id="workspace-save">CTRL+S / SAVE</button>
+          <button id="workspace-load">CTRL+L / LOAD LAST</button>
+          <button id="memory-clear">CLEAR MEMORY</button>
+        </div>
+        <div class="workspace-presets">
+          <button data-workspace="study">STUDY</button>
+          <button data-workspace="coding">CODING</button>
+          <button data-workspace="research">RESEARCH</button>
+          <button data-workspace="music">MUSIC</button>
+          <button data-workspace="night">NIGHT</button>
+        </div>
+      </section>
+      <section id="agent-center" class="agent-center">
+        <button id="agent-center-toggle" class="agent-center-toggle"><span>AI</span><b>AGENT CENTER</b><small>EXPAND</small></button>
+        <div class="agent-center-body">
+          <p class="eyebrow">LOCAL ASSISTANTS</p>
+          <div id="agent-list" class="agent-list"></div>
+          <p class="eyebrow">CURRENT SUGGESTIONS</p>
+          <div id="agent-suggestions" class="agent-suggestions">NO ACTIVE SUGGESTIONS</div>
+          <button id="agents-close-all" class="agents-close-all">CLOSE ALL AGENTS</button>
+        </div>
+      </section>
+      <section id="multi-agent-center" class="multi-agent-center">
+        <button id="multi-agent-toggle" class="multi-agent-toggle"><span>V10</span><b>MULTI AGENT CENTER</b><small>EXPAND</small></button>
+        <div class="multi-agent-body">
+          <p class="eyebrow">AGENT TEAM</p>
+          <div id="multi-agent-list" class="multi-agent-list"></div>
+          <input id="multi-agent-task-input" type="text" placeholder="CREATE TASK" aria-label="Create multi-agent task" />
+          <div class="multi-agent-controls">
+            <button id="multi-agent-create">CREATE TASK</button>
+            <button id="multi-agent-start">START COLLAB</button>
+            <button id="multi-agent-stop">STOP</button>
+            <button id="multi-agent-status">STATUS</button>
+          </div>
+          <p class="eyebrow">TASK FLOW</p>
+          <p id="task-flow" class="task-flow">User -> Coordinator -> Planner -> Executor -> Reviewer -> Coordinator -> Final Output</p>
+          <p class="eyebrow">TASK BOARD</p>
+          <div id="task-board" class="task-board"></div>
+          <p class="eyebrow">RECENT AGENT DISCUSSION</p>
+          <div id="agent-discussion" class="agent-discussion">NO RECENT AGENT DISCUSSION</div>
+        </div>
+      </section>
+    </aside>
+    <aside id="plugin-center" class="plugin-center glass" aria-label="Plugin center">
+      <header class="plugin-center-heading">
+        <div><p class="eyebrow">V10 OPERATING LAYER</p><h2>PLUGIN CENTER</h2></div>
+        <button id="plugin-center-close" aria-label="Close plugin center">CLOSE</button>
+      </header>
+      <input id="plugin-search" type="search" placeholder="SEARCH PLUGINS  CTRL+SHIFT+P" aria-label="Search plugins" />
+      <div id="plugin-list" class="plugin-list"></div>
+      <p id="plugin-details" class="plugin-details">Select a plugin to inspect its purpose. Plugin failures are isolated automatically.</p>
+      <p class="plugin-marketplace">MARKETPLACE RESERVED: VISUAL / MUSIC / AGENT / PRODUCTIVITY PLUGINS. ONLINE STORE DISABLED IN V10.</p>
+    </aside>
+    <section id="mission-control" class="mission-control glass" aria-label="Mission Control">
+      <header class="mission-header">
+        <div><p class="eyebrow">PMOS V10</p><h2>MISSION CONTROL</h2><span>Vision Pro / Jarvis command surface</span></div>
+        <button id="mission-close" aria-label="Close Mission Control">CLOSE</button>
+      </header>
+      <div class="mission-grid">
+        <section><p class="eyebrow">VISUAL LAYER / WORLDS</p><div id="mission-worlds" class="mission-list"></div></section>
+        <section><p class="eyebrow">INTELLIGENCE LAYER / AGENTS</p><div id="mission-agents" class="mission-list"></div></section>
+        <section><p class="eyebrow">OPERATING LAYER / TASK CENTER</p><div id="mission-tasks" class="mission-list compact"></div><div class="mission-actions"><button id="mission-create-task">CREATE REVIEW TASK</button><button id="mission-start-task">START TEAM</button></div></section>
+        <section><p class="eyebrow">OPERATING LAYER / PLUGINS</p><div id="mission-plugins" class="mission-list"></div></section>
+        <section><p class="eyebrow">WORKSPACE OS</p><div id="mission-workspaces" class="mission-list compact"></div></section>
+        <section><p class="eyebrow">SYSTEM STATUS</p><div id="mission-systems" class="mission-list"></div></section>
+      </div>
+    </section>
+    <aside id="command-help" class="command-help glass" aria-label="Command Help">
+      <header class="command-help-heading">
+        <div><p class="eyebrow">COMMAND HELP</p><h2>VOICE + GESTURE</h2></div>
+        <button id="command-help-close" aria-label="Close command help">CLOSE</button>
+      </header>
+      <div class="command-help-grid">
+        <section>
+          <h3>VOICE COMMANDS</h3>
+          <p>下一页 / next</p>
+          <p>上一页 / back</p>
+          <p>进入黑洞 / black hole</p>
+          <p>粒子爆发 / burst</p>
+          <p>播放音乐 / play music</p>
+          <p>打开仪表盘 / dashboard</p>
+        </section>
+        <section>
+          <h3>GESTURE COMMANDS</h3>
+          <p>张开手: 粒子扩散</p>
+          <p>握拳: 粒子聚合</p>
+          <p>食指指向: 粒子跟随</p>
+          <p>左挥: 上一页</p>
+          <p>右挥: 下一页</p>
+          <p>捏合: 粒子聚焦</p>
+          <p>双手张开: 世界爆发</p>
+        </section>
+      </div>
+    </aside>
+    <audio id="music-audio" preload="metadata"></audio>
+    <input id="music-file" class="hidden-input" type="file" accept="audio/*" multiple />
+    <footer>
+      <span>MOVE TO ATTRACT</span><i></i><span>SCROLL TO EXPAND</span><i></i><span>HOLD TO CONVERGE</span>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

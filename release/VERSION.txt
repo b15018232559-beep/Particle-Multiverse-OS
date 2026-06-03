@@ -1,0 +1,4 @@
+Particle Multiverse OS V10
+Version: 10.0.0
+Release: Final consolidation release
+Date: 2026-06-03

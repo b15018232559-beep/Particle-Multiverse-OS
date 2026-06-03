@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Particle Multiverse OS",
+  "version": "10.0.0",
+  "identifier": "com.particlemultiverse.os",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Particle Multiverse OS",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 900,
+        "minHeight": 620,
+        "backgroundColor": "#02040e",
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": { "csp": null }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "useLocalToolsDir": true,
+    "category": "Entertainment",
+    "shortDescription": "Cinematic particle universes",
+    "longDescription": "Explore six interactive cinematic particle universes."
+  }
+}

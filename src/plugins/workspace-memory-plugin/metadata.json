@@ -1,0 +1,8 @@
+{
+  "id": "workspace-memory-plugin",
+  "name": "Workspace Memory Plugin",
+  "version": "1.0.0",
+  "description": "Local-only workspace persistence, analytics, import, and export.",
+  "dependencies": ["scene-plugin", "performance-plugin", "dashboard-plugin"],
+  "autoEnable": true
+}
