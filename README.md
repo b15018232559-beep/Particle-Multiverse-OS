@@ -47,32 +47,32 @@ The project is designed as an open-source portfolio piece: visually strong, easy
   <img src="screenshots/particle-multiverse-os-demo.gif" alt="Particle Multiverse OS animated demo" width="82%" />
 </p>
 
-### Project Screenshots
+### High-Resolution Product Screenshots
 
 <table>
   <tr>
-    <td width="50%"><img src="screenshots/world-tree.png" alt="AI World Tree particle universe" /></td>
-    <td width="50%"><img src="screenshots/black-hole.png" alt="Black Hole Universe particle scene" /></td>
+    <td width="50%"><img src="docs/screenshots/01-home-world-tree.png" alt="Particle Multiverse OS home screen" /></td>
+    <td width="50%"><img src="docs/screenshots/02-black-hole-universe.png" alt="Black Hole Universe product screenshot" /></td>
   </tr>
   <tr>
-    <td align="center"><strong>AI World Tree</strong></td>
+    <td align="center"><strong>Home / AI World Tree</strong></td>
     <td align="center"><strong>Black Hole Universe</strong></td>
   </tr>
   <tr>
-    <td width="50%"><img src="screenshots/arc-reactor.png" alt="ARC Reactor particle universe" /></td>
-    <td width="50%"><img src="screenshots/neural-brain.png" alt="Neural Brain particle universe" /></td>
+    <td width="50%"><img src="docs/screenshots/03-arc-reactor.png" alt="ARC Reactor product screenshot" /></td>
+    <td width="50%"><img src="docs/screenshots/04-particle-burst-interaction.png" alt="Particle burst interaction screenshot" /></td>
   </tr>
   <tr>
     <td align="center"><strong>ARC Reactor</strong></td>
-    <td align="center"><strong>Neural Brain</strong></td>
+    <td align="center"><strong>Particle Burst Interaction</strong></td>
   </tr>
   <tr>
-    <td width="50%"><img src="screenshots/tesseract.png" alt="Tesseract particle universe" /></td>
-    <td width="50%"><img src="screenshots/ultimate.png" alt="Ultimate Multiverse Core particle universe" /></td>
+    <td width="50%"><img src="docs/screenshots/05-system-command-center.png" alt="System Command Center screenshot" /></td>
+    <td width="50%"><img src="docs/screenshots/06-mission-control.png" alt="Mission Control screenshot" /></td>
   </tr>
   <tr>
-    <td align="center"><strong>Tesseract</strong></td>
-    <td align="center"><strong>Ultimate Multiverse Core</strong></td>
+    <td align="center"><strong>System Command Center</strong></td>
+    <td align="center"><strong>Mission Control</strong></td>
   </tr>
 </table>
 
@@ -120,10 +120,12 @@ Release assets:
 - `Particle-Multiverse-OS-Setup.exe`
 - `Particle-Multiverse-OS-Portable.exe`
 - `release/GITHUB_RELEASE_v2.0.md`
+- `release/GITHUB_RELEASE_v1.1.md`
 
 Protected baseline:
 
 - `v1.0` keeps the original portfolio release.
+- `v1.1` adds generated high-resolution product screenshots and README presentation updates.
 - `v2.0` is the Ultimate Edition release line.
 
 ## Install
@@ -181,6 +183,7 @@ vite
 ## Roadmap
 
 - [x] v1.0: Protected cinematic particle desktop release.
+- [x] v1.1: High-resolution product screenshots and README documentation refresh.
 - [x] v2.0: Ultimate Edition identity, presentation, and release metadata.
 - [x] Portfolio README: Hero banner, screenshots, GIF, roadmap, release links, and Star History.
 - [ ] v2.1: World Tree Remaster visual pass.
