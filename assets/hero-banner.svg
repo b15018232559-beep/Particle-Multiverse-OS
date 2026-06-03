@@ -1,0 +1,49 @@
+<svg width="1600" height="720" viewBox="0 0 1600 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Particle Multiverse OS Ultimate Edition hero banner">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#73FFF2" stop-opacity="0.9"/>
+      <stop offset="34%" stop-color="#9D79FF" stop-opacity="0.38"/>
+      <stop offset="72%" stop-color="#050A1B" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#02040E"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1600" y2="720">
+      <stop stop-color="#73FFF2"/>
+      <stop offset="0.52" stop-color="#9D79FF"/>
+      <stop offset="1" stop-color="#FF7FCF"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="720" fill="#02040E"/>
+  <rect width="1600" height="720" fill="url(#core)"/>
+  <g opacity="0.26">
+    <path d="M0 126 C330 40 520 210 800 132 C1110 47 1280 160 1600 76" stroke="url(#line)" stroke-width="1.5"/>
+    <path d="M0 588 C320 650 522 498 800 584 C1076 672 1280 520 1600 612" stroke="url(#line)" stroke-width="1.5"/>
+    <path d="M278 0 C420 170 358 326 514 720" stroke="#73FFF2" stroke-opacity="0.26"/>
+    <path d="M1264 0 C1144 198 1220 418 1038 720" stroke="#FF7FCF" stroke-opacity="0.22"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="800" cy="360" r="86" fill="#73FFF2" fill-opacity="0.12" stroke="#73FFF2" stroke-opacity="0.9" stroke-width="2"/>
+    <circle cx="800" cy="360" r="168" stroke="#9D79FF" stroke-opacity="0.42" stroke-width="2"/>
+    <circle cx="800" cy="360" r="248" stroke="#FF7FCF" stroke-opacity="0.22" stroke-width="1"/>
+    <path d="M676 360 H924 M800 236 V484 M712 272 L888 448 M888 272 L712 448" stroke="#EAF7FF" stroke-opacity="0.42"/>
+  </g>
+  <g opacity="0.9">
+    <circle cx="522" cy="222" r="5" fill="#73FFF2"/>
+    <circle cx="1054" cy="246" r="5" fill="#9D79FF"/>
+    <circle cx="1038" cy="510" r="4" fill="#FF7FCF"/>
+    <circle cx="554" cy="502" r="4" fill="#FFE58E"/>
+    <circle cx="800" cy="118" r="3" fill="#EAF7FF"/>
+  </g>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif" text-anchor="middle">
+    <text x="800" y="314" fill="#EAF7FF" font-size="64" font-weight="700" letter-spacing="10">PARTICLE MULTIVERSE OS</text>
+    <text x="800" y="366" fill="#73FFF2" font-size="22" font-weight="600" letter-spacing="9">ULTIMATE EDITION v2.0</text>
+    <text x="800" y="414" fill="#BFD7FF" font-size="18" letter-spacing="4">CINEMATIC PARTICLE UNIVERSE DESKTOP APP</text>
+    <text x="800" y="470" fill="#8AA6C8" font-size="14" letter-spacing="3">TAURI · VITE · CANVAS · WEBGL2 · LOCAL AI LAYERS</text>
+  </g>
+</svg>
