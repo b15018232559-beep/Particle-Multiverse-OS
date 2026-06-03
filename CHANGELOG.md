@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.0.0 Ultimate Edition - 2026-06-03
+
+- Created the `develop` branch from `world-tree-remaster` while leaving `main` and `v1.0` unchanged.
+- Added the Ultimate Edition runtime identity layer.
+- Added v2.0 release metadata across HUD, Dashboard, Mission Control, document title, and footer.
+- Updated npm and Tauri package versions to `2.0.0`.
+- Added GitHub Release draft for `v2.0`.
+- Preserved all v1.0 content and historical commits.
+
 ## v1.0.0 GitHub Release - 2026-06-03
 
 - Prepared Particle Multiverse OS for GitHub open-source portfolio release.

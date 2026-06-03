@@ -1,4 +1,4 @@
-Particle Multiverse OS V10
-Version: 10.0.0
-Release: Final consolidation release
+Particle Multiverse OS Ultimate Edition
+Version: 2.0.0
+Release: Ultimate Edition
 Date: 2026-06-03

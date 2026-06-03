@@ -1,5 +1,14 @@
 # Project Status
 
+## Ultimate Edition v2.0
+
+- Development branch: `develop`, created from `world-tree-remaster`.
+- Protected release baseline: `v1.0` remains unchanged.
+- Added `src/ultimate-edition.js` as a dedicated release identity layer.
+- Updated HUD, Dashboard, Mission Control, document title, and footer to show Ultimate Edition v2.0 metadata.
+- Updated npm and Tauri version metadata to `2.0.0`.
+- No v1.0 worlds, agents, plugins, memory, release assets, or mission-control systems were removed.
+
 ## Cinematic Visual Upgrade
 
 - Stopped feature expansion and focused only on visual impact, space, energy, and immersion.

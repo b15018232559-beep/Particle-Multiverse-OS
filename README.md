@@ -1,8 +1,8 @@
-# Particle Multiverse OS
+# Particle Multiverse OS Ultimate Edition
 
-**Particle Multiverse OS** is a cinematic desktop particle universe built with Canvas/WebGL, Vite, and Tauri. It is designed as a sci-fi visual experience first: six reactive universes, dense instanced particles, atmospheric glow, local voice commands, hand gestures, music response, workspace memory, and a desktop-ready release package.
+**Particle Multiverse OS Ultimate Edition** is a cinematic desktop particle universe built with Canvas/WebGL, Vite, and Tauri. It preserves the full v1.0 release and adds a v2.0 Ultimate Edition operating identity for the World Tree Remaster development line.
 
-This repository is prepared as an open-source portfolio project and release candidate.
+The protected v1.0 release remains tagged at `v1.0`. Ultimate Edition work is developed on `develop` and released as `v2.0`.
 
 ![Particle Multiverse OS preview](screenshots/Particle-Multiverse-OS-V5-preview.png)
 
@@ -21,6 +21,8 @@ The app contains six particle worlds:
 
 ## Feature Showcase
 
+- Ultimate Edition identity layer with v2.0 release metadata across HUD, Dashboard, and Mission Control.
+- Preserved v1.0 baseline: six worlds, particles, fullscreen, Tauri desktop build, release assets, and local-first privacy.
 - Cinematic particle renderer with LOW/MEDIUM/HIGH/ULTRA density presets.
 - Particle density up to **30,000** particles on ULTRA.
 - Optional WebGL2 instanced particle layer with Canvas fallback.
@@ -125,6 +127,16 @@ Examples:
 - English: `next`, `back`, `black hole`, `burst`, `play music`, `open dashboard`, `show commands`
 
 See [`COMMAND_GUIDE.md`](COMMAND_GUIDE.md) for the full command list.
+
+## Release v2.0
+
+Ultimate Edition release assets and draft notes are prepared in [`release/`](release/):
+
+```text
+release/GITHUB_RELEASE_v2.0.md
+```
+
+The protected v1.0 Git tag is preserved and should not be rewritten.
 
 ## Release v1.0
 
